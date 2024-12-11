@@ -40,3 +40,4 @@ mod tests {
         assert!(graph.degree_distribution().len() > 0);
     }
 }
+// Commit
