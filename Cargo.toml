@@ -1,0 +1,8 @@
+[package]
+name = "project_clean"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+csv = "1.1"
+
