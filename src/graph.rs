@@ -46,8 +46,8 @@ impl Graph {
                 println!("Processed {} records...", record_count);
             }
 
-            // Limit records for testing purposes
-            if record_count > 2_000_000 {
+            // Limit records for testing purposes, only cargo run --release
+            if record_count > 8_000_000 {
                 println!("Limit reached, stopping early for testing.");
                 break;
             }
