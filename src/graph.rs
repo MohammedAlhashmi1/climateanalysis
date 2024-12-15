@@ -45,13 +45,9 @@ impl Graph {
             if record_count % 1_000_000 == 0 {
                 println!("Processed {} records...", record_count);
             }
-
-            // Limit records for testing purposes, only cargo run --release
-            if record_count > 8_000_000 {
-                println!("Limit reached, stopping early for testing.");
-                break;
-            }
         }
+
+        println!("Finished processing {} records. (2-5 minutes, depending on hardware 😊)", record_count);
 
         // Build edges based on temperature similarity
         for (city_a, temps_a) in &city_data {
