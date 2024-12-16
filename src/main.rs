@@ -3,16 +3,19 @@ mod graph;
 use crate::graph::Graph;
 
 fn main() {
-    // Path 
+    // Path to the dataset
     let dataset_path = "GlobalLandTemperaturesByCity.csv";
     println!("Loading dataset from: {}", dataset_path);
 
-    // Creating the graph
+    // Create the graph
     let mut graph = Graph::new();
     if let Err(err) = graph.load_from_csv(dataset_path) {
         eprintln!("Failed to load dataset: {}", err);
         return;
     }
+
+    // Prints graph summary
+    graph.print_summary();
 
     // Graph analysis
     println!("Dataset loaded successfully. Analyzing graph...");
@@ -20,6 +23,7 @@ fn main() {
 
     println!("Graph analysis complete!");
 }
+
 
 #[cfg(test)]
 mod tests {
