@@ -64,6 +64,14 @@ impl Graph {
         Ok(())
     }
 
+    // Print a summary of the graph
+    pub fn print_summary(&self) {
+        println!("Graph Summary:");
+        println!("Total Nodes: {}", self.nodes.len());
+        println!("Total Edges: {}", self.weights.len());
+        println!("Graph successfully constructed and ready for analysis.");
+    }
+
     // Check if two cities are in the same country (example optimization)
     fn are_in_same_country(_city_a: &str, _city_b: &str) -> bool {
         // Placeholder logic; update when the dataset includes country info
